@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>ФИО</th>
+            <th>Должность</th>
+            <th>Телефон</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for e in emps %}
+        <tr>
+            <th>{{ e.id }}</th>
+            <td>{{ e.last_name }} {{ e.first_name }} {{ e.patronym }}</td>
+            <td>{{ e.post }}</td>
+            <td>{{ e.phone }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
